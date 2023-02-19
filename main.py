@@ -26,7 +26,7 @@ def find_mismatch(text):
 
 def main():
     input_choice = input()
-    if input_choice == "I":
+    if input_choice == "I\r":
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
