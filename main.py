@@ -25,16 +25,17 @@ def find_mismatch(text):
 
 
 def main():
-    input_choice = input("Enter F to input from a file, or I to input manually: ")
+    input_choice = input()
     if input_choice == "F":
-        filename = input("Enter filename: ")
+        filename = input()
         with open(filename) as file:
             text = file.read()
+            mismatch = find_mismatch(text)
+            print(mismatch)
     elif input_choice == "I":
-        text = input("Enter brackets: ")
-
-    mismatch = find_mismatch(text)
-    print(mismatch)
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch)
 
 
 if __name__ == "__main__":
