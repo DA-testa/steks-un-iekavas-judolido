@@ -26,16 +26,17 @@ def find_mismatch(text):
 
 def main():
     input_choice = input()
-    if input_choice == "F":
-        filename = input()
+    if input_choice == "I":
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch)
+    else :
+        filename = input_choice
+        # filename = input()
         with open(filename) as file:
             text = file.read()
             mismatch = find_mismatch(text)
             print(mismatch)
-    elif input_choice == "I":
-        text = input()
-        mismatch = find_mismatch(text)
-        print(mismatch)
 
 
 if __name__ == "__main__":
